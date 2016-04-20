@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="myApp">
+	<div>
+		<ul>
+			<li>
+				<a ng-href="#/one">one</a>
+			</li>
+			<li>
+				<a ng-href="#/two">two</a>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<div>
+			test
+		</div>	
+	</div>	
+	<div ng-view></div>
+</body>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="index.js"></script>
+</html>
