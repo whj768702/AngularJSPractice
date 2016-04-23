@@ -23,5 +23,8 @@
     "angular": "^1.5.5",
     "angular-resource": "^1.5.5",
     "angular-route": "^1.5.5"
+  },
+  "devDependencies": {
+    "requirejs": "^2.2.0"
   }
 }
