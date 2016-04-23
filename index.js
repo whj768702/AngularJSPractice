@@ -19,6 +19,6 @@ app.config(function($routeProvider){
 });
 
 
-app.controller('oneController', ['$scope', function($scope){
-	$scope.message = 'hello, oneController';
-}]);
+// app.controller('oneController', ['$scope', function($scope){
+// 	$scope.message = 'hello, oneController';
+// }]);
