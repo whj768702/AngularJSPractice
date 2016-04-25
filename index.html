@@ -36,21 +36,22 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<title>AngularJS DEMO</title>
+	<script type="text/javascript" src="bower_components/requirejs/require.js" data-main="scripts/main"></script>
 </head>
-<body  ng-app="myApp">
-<div ng-controller="DemoController">
-	<h1>{{greeting}}</h1>
-</div>
-<div>
-<ul>
-<li>
-<a ng-href="#/one">one</a>
-</li>
-<li>
-<a ng-href="#/two">two</a>
-</li>
-</ul>
-</div>
-<script type="text/javascript" src="bower_components/requirejs/require.js" data-main="scripts/main"></script>
-</body>
+	<body>
+		<div ng-controller="DemoController">
+			<h1>{{greeting}}</h1>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a ng-href="#/one">one</a>
+				</li>
+				<li>
+					<a ng-href="#/two">two</a>
+				</li>
+			</ul>
+		</div>
+		<div ng-view></div>
+	</body>
 </html>

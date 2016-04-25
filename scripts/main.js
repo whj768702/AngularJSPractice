@@ -35,16 +35,21 @@ requirejs.config({
 		// 需要导出一个名称为 angular 的全局变量， 否则无法使用
 		'angular' : { exports: 'angular' },
 		// 设置 angular 的其它模块依赖 angular 核心模块
-		'angular-route': { deps: ['angular'] }
+		'angular-route': { 
+			deps: ['angular'],
+			exports: 'ngRoute'
+		}
 	}
 });
 require([
-	'app'
-	], function(app) {
+	'app',
+	'angular'
+	], function(app, angular) {
 	//	var $html = angular.element(document.getElementsByTagName('html')[0]);
 	//	angular.element().ready(function() {
 	//		// bootstrap the app manually
 	//		angular.bootstrap(document, ['app']);
 	//	});
+		angular.bootstrap(document, ['myApp']);
 	}
 );
