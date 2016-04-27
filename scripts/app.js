@@ -58,7 +58,20 @@ define(['angular', 'require', 'angular-route'], function(angular, require) {
     'use strict';
     // 定义 angular 模块
     var app = angular.module('myApp', ['ngRoute']);
-	app.config(['$routeProvider', '$controllerProvider', function($routeProvider, $controllerProvider){
+	app.config(['$routeProvider', '$controllerProvider', '$stateProvider', function($routeProvider, $controllerProvider, $stateProvider){
+		var provider = $stateProvider.state('one',{
+			url: '/one',
+			controller: 'oneController',
+			template: '<div>test</div>'
+		});
+		provider.state('one.num1', {
+			url: '/num1',
+			views: {
+				'one':{
+					template: '<div>num1</div>'
+				}
+			}
+		})
 		$routeProvider
 			.when('/one', {
  			// template: '<div>here is one</div>'
