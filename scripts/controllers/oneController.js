@@ -12,7 +12,7 @@
 define(['angular'], function (angular) {
 	'use strict'
     //将本控制器函数作为结果返回给router.js
-    return function oneController($scope){
+    function oneController($scope){
         $scope.message = 'hello, oneController';
         $scope.src = {
         	a: 'A',
@@ -42,4 +42,6 @@ define(['angular'], function (angular) {
         	$scope.temp.A = 'changed';
         }
     };
+
+    return oneController;
 });
