@@ -45,13 +45,45 @@
 		<div>
 			<ul>
 				<li>
-					<a ng-href="#/one">one</a>
+					<a href="#/one">one</a>
+					<ul>
+						<li>
+							<a href="#/one/num1">num1</a>
+						</li>
+						<li>
+							<a href="#/one/num2">num2</a>
+						</li>
+					</ul>
 				</li>
 				<li>
-					<a ng-href="#/two">two</a>
+					<a href="#/two">two</a>
 				</li>
 			</ul>
 		</div>
-		<div ng-view></div>
+		<!-- <div ng-view></div> -->
+		<div>
+			<div ui-view></div>
+			<p>start num1</p>
+			<div ui-view="num1"></div>
+			<p>end num1</p>
+			<br/>
+			<p>start num2</p>
+			<div ui-view="num2"></div>
+			<p>end num2</p>
+		</div>	
+		<br/>
+
+<!-- 		<ul>
+			<li>
+				<a href="#/home">home</a>
+			</li>
+			<li>
+				<a href="#/home/status">status</a>
+			</li>
+		</ul>
+		<div>
+			  	<div ui-view></div>
+  				<div ui-view="status"></div>
+		</div> -->
 	</body>
 </html>
