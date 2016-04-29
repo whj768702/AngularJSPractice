@@ -46,15 +46,18 @@ requirejs.config({
 	}
 });
 require([
-	'app',
 	'angular',
-	'angular-ui-route'
-	], function(app, angular) {
+	'app',
+	// 'angular-ui-route',
+	'directives/myDirectives'
+	], function(angular) {
 	//	var $html = angular.element(document.getElementsByTagName('html')[0]);
 	//	angular.element().ready(function() {
 	//		// bootstrap the app manually
 	//		angular.bootstrap(document, ['app']);
 	//	});
-		angular.bootstrap(document, ['myApp']);
+		angular.element(document).ready(function () {
+			angular.bootstrap(document, ['myApp']);
+		});
 	}
 );
