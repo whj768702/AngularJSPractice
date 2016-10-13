@@ -29,7 +29,8 @@ requirejs.config({
 	paths: {
 		// angular 脚本的路径， 相对于 baseUrl
 		'angular': '../bower_components/angular/angular',
-		'angular-route': '../bower_components/angular-route/angular-route'
+		'angular-route': '../bower_components/angular-route/angular-route',
+		'angular-ui-route': '../bower_components/angular-ui-router/release/angular-ui-router'
 	},
 	shim: {
 		// 需要导出一个名称为 angular 的全局变量， 否则无法使用
@@ -38,18 +39,25 @@ requirejs.config({
 		'angular-route': { 
 			deps: ['angular'],
 			exports: 'ngRoute'
+		},
+		'angular-ui-route': {
+			deps: ['angular']
 		}
 	}
 });
 require([
+	'angular',
 	'app',
-	'angular'
-	], function(app, angular) {
+	// 'angular-ui-route',
+	'directives/myDirectives'
+	], function(angular) {
 	//	var $html = angular.element(document.getElementsByTagName('html')[0]);
 	//	angular.element().ready(function() {
 	//		// bootstrap the app manually
 	//		angular.bootstrap(document, ['app']);
 	//	});
-		angular.bootstrap(document, ['myApp']);
+		angular.element(document).ready(function () {
+			angular.bootstrap(document, ['myApp']);
+		});
 	}
 );
