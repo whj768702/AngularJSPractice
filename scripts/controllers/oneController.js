@@ -10,9 +10,10 @@
 // });
 
 define(['angular'], function (angular) {
-	'use strict'
+	'use strict';
     //将本控制器函数作为结果返回给router.js
     return function oneController($scope){
         $scope.message = 'hello, oneController';
+        $scope.inputValue = 'value';
     };
 });

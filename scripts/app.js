@@ -101,5 +101,11 @@ define(['angular', 'require', 'angular-route'], function(angular, require) {
     app.controller('DemoController', ['$scope', function($scope) {
         $scope.greeting = 'Hello, world!';
     }]);
+
+	app.directive('helloWorld', function(){
+		return {
+			template: "<h1>hello world</h1>"
+		}
+	});
     return app;
 });
