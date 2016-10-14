@@ -1,31 +1,15 @@
 {
-  "name": "AngularJSPractice",
-  "main": "index.js",
-  "authors": [
-    "whj768702"
-  ],
-  "description": "AngularJS中一些指令练习。",
-  "keywords": [
-    "AngularJS",
-    "ng-*"
-  ],
-  "license": "MIT",
-  "homepage": "index.html",
-  "private": true,
+  "name": "AngularJS + RequireJS Example",
+  "version": "0.1",
+  "main": "index.html",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "libs"
   ],
   "dependencies": {
-    "angular": "^1.5.5",
-    "angular-resource": "^1.5.5",
-    "angular-route": "^1.5.5",
-    "angular-ui-router": "^0.2.18"
-  },
-  "devDependencies": {
-    "requirejs": "^2.2.0"
+    "angular": "latest",
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "angular-route": "latest"
   }
 }

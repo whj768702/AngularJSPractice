@@ -1,89 +1,75 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
+<!--<html>-->
+<!--<head lang="en">-->
 	<!--<meta charset="UTF-8">-->
-	<!--<title>Document</title>-->
-	<!--&lt;!&ndash;<script type="text/javascript" src="bower_components/requirejs/require.js" data-main="scripts/main"></script>&ndash;&gt;-->
+	<!--<title>AngularJS DEMO</title>-->
+	<!--<script type="text/javascript" src="bower_components/requirejs/require.js" data-main="scripts/main"></script>-->
 <!--</head>-->
-<!--<body ng-app="myApp">-->
-	<!--<div ng-controller="DemoController">-->
-		<!--<div>{{greeting}}</div>-->
-	<!--</div>-->
-	<!--<div>-->
+	<!--<body>-->
+		<!--<div ng-controller="DemoController">-->
+			<!--<h1>{{greeting}}</h1>-->
+		<!--</div>-->
 		<!--<div>-->
 			<!--<ul>-->
 				<!--<li>-->
-					<!--<a ng-href="#/one">one</a>-->
+					<!--<a href="#/one">one</a>-->
+					<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+						<!--&lt;!&ndash;<li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<a href="#/one/num1">num1</a>&ndash;&gt;-->
+						<!--&lt;!&ndash;</li>&ndash;&gt;-->
+						<!--&lt;!&ndash;<li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<a href="#/one/num2">num2</a>&ndash;&gt;-->
+						<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;</ul>&ndash;&gt;-->
 				<!--</li>-->
 				<!--<li>-->
-					<!--<a ng-href="#/two">two</a>-->
+					<!--<a href="#/two">two</a>-->
 				<!--</li>-->
 			<!--</ul>-->
 		<!--</div>-->
-		<!--<div ng-view></div>-->
-	<!--</div>-->
+		<!--&lt;!&ndash; <div ng-view></div> &ndash;&gt;-->
+		<!--<div>-->
+			<!--<div ui-view></div>-->
+			<!--&lt;!&ndash;<p>start num1</p>&ndash;&gt;-->
+			<!--&lt;!&ndash;<div ui-view="num1"></div>&ndash;&gt;-->
+			<!--&lt;!&ndash;<p>end num1</p>&ndash;&gt;-->
+			<!--&lt;!&ndash;<br/>&ndash;&gt;-->
+			<!--&lt;!&ndash;<p>start num2</p>&ndash;&gt;-->
+			<!--&lt;!&ndash;<div ui-view="num2"></div>&ndash;&gt;-->
+			<!--&lt;!&ndash;<p>end num2</p>&ndash;&gt;-->
+		<!--</div>-->
+		<!--<br/>-->
 
-	<!--<script type="text/javascript" src="bower_components/requirejs/require.js" data-main="scripts/main"></script>-->
-<!--</body>-->
-
-	<!--&lt;!&ndash; <script src="bower_components/angular/angular.min.js"></script>-->
-	<!--<script src="bower_components/angular-route/angular-route.min.js"></script>-->
-	<!--<script src="bower_components/angular-resource/angular-resource.min.js"></script>-->
-	<!--<script src="index.js"></script>-->
-	<!--<script src="scripts/oneController.js"></script> &ndash;&gt;-->
+<!--&lt;!&ndash; 		<ul>-->
+			<!--<li>-->
+				<!--<a href="#/home">home</a>-->
+			<!--</li>-->
+			<!--<li>-->
+				<!--<a href="#/home/status">status</a>-->
+			<!--</li>-->
+		<!--</ul>-->
+		<!--<div>-->
+			  	<!--<div ui-view></div>-->
+  				<!--<div ui-view="status"></div>-->
+		<!--</div> &ndash;&gt;-->
+	<!--</body>-->
 <!--</html>-->
-<html>
-<head lang="en">
-	<meta charset="UTF-8">
-	<title>AngularJS DEMO</title>
-	<script type="text/javascript" src="bower_components/requirejs/require.js" data-main="scripts/main"></script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS AngularJS + RequireJS App</title>
+  <!--<link rel="stylesheet" href="css/app.css">-->
 </head>
-	<body>
-		<div ng-controller="DemoController">
-			<h1>{{greeting}}</h1>
-		</div>
-		<div>
-			<ul>
-				<li>
-					<a href="#/one">one</a>
-					<ul>
-						<li>
-							<a href="#/one/num1">num1</a>
-						</li>
-						<li>
-							<a href="#/one/num2">num2</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#/two">two</a>
-				</li>
-			</ul>
-		</div>
-		<!-- <div ng-view></div> -->
-		<div>
-			<div ui-view></div>
-			<p>start num1</p>
-			<div ui-view="num1"></div>
-			<p>end num1</p>
-			<br/>
-			<p>start num2</p>
-			<div ui-view="num2"></div>
-			<p>end num2</p>
-		</div>
-		<br/>
+<body>
+  <ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+  </ul>
 
-<!-- 		<ul>
-			<li>
-				<a href="#/home">home</a>
-			</li>
-			<li>
-				<a href="#/home/status">status</a>
-			</li>
-		</ul>
-		<div>
-			  	<div ui-view></div>
-  				<div ui-view="status"></div>
-		</div> -->
-	</body>
+<div data-ng-view></div>
+
+<div>Angular Require seed app: v<span app-version></span></div>
+
+<script src="bower_components/requirejs/require.js" data-main="scripts/main.js"></script>
+</body>
 </html>
