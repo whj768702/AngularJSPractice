@@ -10,6 +10,7 @@
     "angular": "latest",
     "requirejs": "latest",
     "requirejs-domready": "latest",
-    "angular-route": "latest"
+    "angular-route": "latest",
+    "angular-ui-router": "latest"
   }
 }
