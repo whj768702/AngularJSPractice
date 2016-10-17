@@ -2,7 +2,8 @@ define([
     'require',
     'angular',
     'app',
-    './routes/routes'
+    './routes/routes',
+    './controllers/index'
 ], function(require,angular){
     'use strict';
 

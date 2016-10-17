@@ -113,15 +113,15 @@
 define([
     'angular',
     'angular-route',
-    // 'angular-ui-route',
-    './controllers/index',
-    './routes/index'
+    'ui.router',
+    // './controllers/index',
+    // './routes/index'
     // './directives/index',
     // './filters/index',
     // './services/index'
 ], function(angular){
     'use strict';
-    var app = angular.module('appW', ['controller', 'state']);
+    var app = angular.module('appW', ['ui.router', 'controller', 'state']);
     // return angular.module('app', ['app.services', 'app.controllers', 'app.filters', 'app.directives']);
     // return angular.module('appW', ['appW.controller']);
     return app;

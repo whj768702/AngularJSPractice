@@ -47,7 +47,7 @@ require.config({
         'domReady': '../bower_components/requirejs-domready/domReady',
         'angular': '../bower_components/angular/angular',
         'angular-route': '../bower_components/angular-route/angular-route',
-        'angular-ui-route': '../bower_components/angular-ui-router/release/angular-ui-router'
+        'ui.router': '../bower_components/angular-ui-router/release/angular-ui-router'
     },
 
     // angular does not support AMD out of the box, put it in a shim
@@ -59,7 +59,12 @@ require.config({
         'angular-route': {
 			deps: ['angular'],
 			exports: 'ngRoute'
-		}
+		},
+
+        'ui.router': {
+		    deps: ['angular']
+            // exports: 'ui.router'
+        }
     },
 
     // kick start application
