@@ -121,7 +121,7 @@ define([
     // './services/index'
 ], function(angular){
     'use strict';
-    var app = angular.module('appW', ['ui.router', 'controller', 'state']);
+    var app = angular.module('app', ['ui.router', 'myController', 'myRoute']);
     // return angular.module('app', ['app.services', 'app.controllers', 'app.filters', 'app.directives']);
     // return angular.module('appW', ['appW.controller']);
     return app;

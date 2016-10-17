@@ -1,0 +1,5 @@
+
+define([
+    './routes',
+    './first'
+], function(){});

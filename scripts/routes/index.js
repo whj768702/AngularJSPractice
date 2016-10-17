@@ -1,5 +1,0 @@
-
-define([
-    './state',
-    './routes'
-], function(){});

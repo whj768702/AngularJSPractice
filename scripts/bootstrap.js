@@ -2,12 +2,12 @@ define([
     'require',
     'angular',
     'app',
-    './routes/routes',
-    './controllers/index'
+    './routes/base',
+    './controllers/base'
 ], function(require,angular){
     'use strict';
 
     require(['domReady!'], function(document){
-        angular.bootstrap(document, ['appW']);
+        angular.bootstrap(document, ['app']);
     });
 });

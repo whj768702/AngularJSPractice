@@ -1,5 +1,5 @@
 
-define(['./module'], function(controllers){
+define(['./controllers'], function(controllers){
     'use strict';
 
     controllers.controller('MyCtrl2', [function($scope){}]);
